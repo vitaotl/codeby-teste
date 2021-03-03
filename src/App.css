@@ -59,13 +59,13 @@
 
 .total-price {
   width: 10vw;
-  margin-right: '25px'; 
+  /* margin-right: '25px';  */
   text-align: '-moz-right';
 }
 
-@media (max-width: 390px) {
+@media (max-width: 1345px) {
   .total-price {
-    width: 30vw;
+    width: 24%;
   }
 
   .frete-gratis-text {
