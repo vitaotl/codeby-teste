@@ -29,7 +29,7 @@ function App() {
       })
       .catch(err => console.log(err))
 
-  }, [interruptorButton])
+  }, [interruptorButton, url])
 
   const handleChange = (event) => {
     setInterruptorButton({ ...interruptorButton, [event.target.name]: event.target.checked });
