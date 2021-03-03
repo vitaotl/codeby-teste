@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.App {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 30vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  min-width: 340px;
+}
+
+.header-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: baseline;
+  border-bottom: 2px solid rgb(238, 238, 238);
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.total {
+  border-top: 2px solid rgb(238, 238, 238);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  /* padding: 0 5px; */
+}
+
+.frete-gratis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  background-color: #c7ffa6;
+  border-radius: 20px;
+  margin: 0 auto 10px auto;
+}
+
+.frete-gratis-text {
+  font-family: "Poppins",sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 5px;
+  color: #277a02;
+}
+
+.total-price {
+  width: 10vw;
+  margin-right: '25px'; 
+  text-align: '-moz-right';
+}
+
+@media (max-width: 390px) {
+  .total-price {
+    width: 30vw;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+  .frete-gratis-text {
+    font-size: 14px;
+   } 
+}
+
+.button {
+  background-color: #3b74f2;
+  font-family: "Poppins",sans-serif;
+  color: #FFF;
+  width: 80%;
+  margin: 15px auto;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  cursor: pointer;
 }
