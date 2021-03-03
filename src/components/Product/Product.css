@@ -3,7 +3,6 @@
   flex-direction: row;
   padding-left: 10px;
   margin: 5px 10px 10px 10px;
-  /* border: 1px solid red */
 }
 
 .productImage {
@@ -18,24 +17,21 @@
   font-size: 12px;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
 }
 
 .productName {
-  /* border: 1px solid red; */
   padding-top: 15px;
   align-self: flex-start;
   font-weight: 600;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 1345px) {
   .productName {
     font-size: 10px;
   } 
 }
 
 .productPrice {
-  /* border: 1px solid red; */
   align-self: flex-start;
   margin-top: 10px;
 }
