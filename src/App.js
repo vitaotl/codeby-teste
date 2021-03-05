@@ -4,14 +4,12 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Switch from '@material-ui/core/Switch';
 
-import abaixoDeDez from '../public/abaixo-10-reais.json'
-import acimaDeDez from '../public/acima-10-reais.json'
 import './App.css';
 import Product from './components/Product'
 
 function App() {
-  let abaixoDeDezUrl = abaixoDeDez
-  let acimaDeDezUrl = acimaDeDez
+  let abaixoDeDezUrl = 'abaixo-10-reais.json'
+  let acimaDeDezUrl = 'acima-10-reais.json'
   const [products, setProducts] = useState([])
   const [total, setTotal] = useState(0)
   const [desconto, setDesconto] = useState(0)
@@ -19,17 +17,16 @@ function App() {
   const [interruptorButton, setInterruptorButton] = useState({
     checked: true
   })
-  console.log(url)
-
+  
   useEffect(() => {
     axios.get(url)
-      .then(res => {
-        setProducts(res)
-        let total = (res.totalizers[0].value / 100)
-        let desconto = (res.totalizers[1].value / 100)
+    .then(res => {
+        console.log(res)
+        setProducts(res.data)
+        let total = (res.data.totalizers[0].value / 100)
+        let desconto = (res.data.totalizers[1].value / 100)
         setTotal(total)
         setDesconto(desconto)
-        console.log(res)
       })
       .catch(err => console.log(err))
 
