@@ -4,14 +4,14 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Switch from '@material-ui/core/Switch';
 
-import abaixoDeDez from './api/abaixoDeDez.json'
-import acimaDeDez from './api/acimaDeDez.json'
+// import abaixoDeDez from './api/abaixoDeDez.json'
+// import acimaDeDez from './api/acimaDeDez.json'
 import './App.css';
 import Product from './components/Product'
 
 function App() {
-  let abaixoDeDezUrl = 'api/abaixoDeDez.json' 
-  let acimaDeDezUrl = 'api/acimaDeDez.json'
+  let abaixoDeDezUrl = './api/abaixoDeDez.json' 
+  let acimaDeDezUrl = './api/acimaDeDez.json'
   const [products, setProducts] = useState([])
   const [total, setTotal] = useState(0)
   const [desconto, setDesconto] = useState(0)
