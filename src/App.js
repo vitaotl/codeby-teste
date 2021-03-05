@@ -10,8 +10,8 @@ import './App.css';
 import Product from './components/Product'
 
 function App() {
-  let abaixoDeDezUrl = './api/abaixoDeDez.json' 
-  let acimaDeDezUrl = './api/acimaDeDez.json'
+  let abaixoDeDezUrl = `/abaixo-10-reais.json` 
+  let acimaDeDezUrl = `/acima-10-reais.json`
   const [products, setProducts] = useState([])
   const [total, setTotal] = useState(0)
   const [desconto, setDesconto] = useState(0)
@@ -19,6 +19,7 @@ function App() {
   const [interruptorButton, setInterruptorButton] = useState({
     checked: true
   })
+  console.log(url)
 
   useEffect(() => {
     axios.get(url)
